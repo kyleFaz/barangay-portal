@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barangay Ligid-Tipas Portal</title>
+    <meta
+      name="description"
+      content="Barangay Ligid-Tipas community portal for services, requests, and resident information."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">BL</span>
+          <div>
+            <strong>Barangay Ligid-Tipas</strong>
+            <small>Community Portal</small>
+          </div>
+        </div>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#request">Request</a>
+          <a href="#about">About</a>
+          <a href="#chatbot">Assistant</a>
+        </nav>
+        <button id="loginBtn" class="primary-btn">Sign In</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Public service portal</p>
+            <h1>Fast, transparent, and resident-friendly barangay services.</h1>
+            <p class="lead">
+              Request barangay documents, check updates, and get quick responses for
+              common public concerns from one simple platform.
+            </p>
+            <div class="hero-actions">
+              <a href="#request" class="primary-btn">Request Service</a>
+              <a href="#services" class="secondary-btn">Explore Services</a>
+            </div>
+            <ul class="hero-points">
+              <li>Resident-friendly processes</li>
+              <li>Clear service requirements</li>
+              <li>Public announcements and updates</li>
+            </ul>
+          </div>
+          <div class="hero-card">
+            <div class="status-badge">Live updates</div>
+            <h3>Today at the barangay</h3>
+            <div class="notice">
+              <span class="dot"></span>
+              Issuance of certificates and clearances on weekdays from 8:00 AM to 4:00 PM.
+            </div>
+            <div class="mini-stats">
+              <div>
+                <strong>420+</strong>
+                <span>Residents served</span>
+              </div>
+              <div>
+                <strong>8</strong>
+                <span>Active services</span>
+              </div>
+              <div>
+                <strong>96%</strong>
+                <span>Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Popular services</p>
+            <h2>Barangay services available</h2>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Barangay Clearance</h3>
+              <p>For local employment, business, and compliance requests.</p>
+              <span>Processing: 2–3 days</span>
+            </article>
+            <article class="service-card">
+              <h3>Certificate of Residency</h3>
+              <p>Proof of residence for school, work, or government requirements.</p>
+              <span>Processing: 1–2 days</span>
+            </article>
+            <article class="service-card">
+              <h3>Certificate of Indigency</h3>
+              <p>Support for assistance and community aid applications.</p>
+              <span>Processing: 2 days</span>
+            </article>
+            <article class="service-card">
+              <h3>Barangay ID</h3>
+              <p>Registration and identification for residents and household members.</p>
+              <span>Processing: 3 days</span>
+            </article>
+            <article class="service-card">
+              <h3>Business Permit Support</h3>
+              <p>For businesses seeking barangay verification and local endorsement.</p>
+              <span>Processing: 3–5 days</span>
+            </article>
+            <article class="service-card">
+              <h3>Complaint / Concern</h3>
+              <p>Report community issues, concerns, or requests to barangay staff.</p>
+              <span>Response: 1–2 days</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="request" class="section alt-bg">
+        <div class="container two-col">
+          <div>
+            <div class="section-heading left">
+              <p class="eyebrow">Request form</p>
+              <h2>Submit a document request</h2>
+            </div>
+            <form id="requestForm" class="request-form">
+              <div class="field-row">
+                <label>
+                  Full name
+                  <input type="text" id="name" placeholder="Juan Dela Cruz" required />
+                </label>
+                <label>
+                  Email
+                  <input type="email" id="email" placeholder="you@example.com" required />
+                </label>
+              </div>
+              <div class="field-row">
+                <label>
+                  Service type
+                  <select id="serviceType" required>
+                    <option value="">Select service</option>
+                    <option>Barangay Clearance</option>
+                    <option>Certificate of Residency</option>
+                    <option>Certificate of Indigency</option>
+                    <option>Barangay ID</option>
+                    <option>Business Permit Support</option>
+                    <option>Complaint / Concern</option>
+                  </select>
+                </label>
+                <label>
+                  Preferred date
+                  <input type="date" id="date" required />
+                </label>
+              </div>
+              <label>
+                Details
+                <textarea id="details" rows="5" placeholder="Describe your request or concern..." required></textarea>
+              </label>
+              <button type="submit" class="primary-btn">Submit Request</button>
+            </form>
+          </div>
+
+          <aside class="panel">
+            <div class="panel-header">
+              <h3>Recent requests</h3>
+              <span id="totalRequests">0</span>
+            </div>
+            <div id="requestList" class="request-list"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container info-grid">
+          <div>
+            <p class="eyebrow">About the barangay</p>
+            <h2>Serving the community with transparency</h2>
+            <p>
+              Barangay Ligid-Tipas is committed to efficient public service delivery,
+              citizen participation, and responsive local governance.
+            </p>
+            <p>
+              This portal helps residents access essential barangay forms and track service
+              needs without unnecessary delays.
+            </p>
+          </div>
+          <div class="info-boxes">
+            <div class="info-box">
+              <strong>Office Hours</strong>
+              <span>Monday to Friday</span>
+              <small>8:00 AM – 4:00 PM</small>
+            </div>
+            <div class="info-box">
+              <strong>Hotline</strong>
+              <span>Barangay Assistance</span>
+              <small>+63 912 345 6789</small>
+            </div>
+            <div class="info-box">
+              <strong>Location</strong>
+              <span>Barangay Hall</span>
+              <small>Ligid-Tipas, Quezon City</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="chatbot" class="section alt-bg chatbot-section">
+        <div class="container chatbot-wrap">
+          <div class="section-heading left">
+            <p class="eyebrow">Resident assistant</p>
+            <h2>Need quick help?</h2>
+          </div>
+          <div class="chatbot-box">
+            <div id="chatMessages" class="chat-messages">
+              <div class="message bot">Hello! I can help with common barangay inquiries. Try asking about requirements, office hours, or available services.</div>
+            </div>
+            <form id="chatForm" class="chat-form">
+              <input id="chatInput" type="text" placeholder="Ask a question..." />
+              <button type="submit" class="primary-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="loginModal" class="modal hidden">
+      <div class="modal-card">
+        <button id="closeModal" class="close-btn" aria-label="Close">×</button>
+        <h3>Resident Sign In</h3>
+        <form id="loginForm">
+          <label>
+            Username
+            <input type="text" id="username" placeholder="resident01" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="password" placeholder="••••••••" required />
+          </label>
+          <button type="submit" class="primary-btn">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 Barangay Ligid-Tipas. All rights reserved.</p>
+        <p>Resident Portal</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
