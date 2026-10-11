@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barangay Ligid-Tipas Portal</title>
+    <title>Barangay Ligid-Tipas</title>
     <meta
       name="description"
-      content="Barangay Ligid-Tipas community portal for services, requests, and resident information."
+      content="Barangay Ligid-Tipas official portal for community news, services, and resident assistance."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,242 +18,225 @@
   </head>
   <body>
     <header class="topbar">
-      <div class="container nav">
+      <div class="container nav-wrap">
         <div class="brand">
-          <span class="brand-mark">BL</span>
-          <div>
-            <strong>Barangay Ligid-Tipas</strong>
-            <small>Community Portal</small>
+          <div class="brand-badge">
+            <span>BL</span>
+          </div>
+          <div class="brand-copy">
+            <span class="brand-main">BARANGAY</span>
+            <span class="brand-main brand-slash">LIGID-TIPAS</span>
+            <small>San Juan, Pasig City</small>
           </div>
         </div>
-        <nav>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="#">Home</a>
+          <a href="#about">Our Barangay</a>
           <a href="#services">Services</a>
-          <a href="#request">Request</a>
-          <a href="#about">About</a>
-          <a href="#chatbot">Assistant</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <button id="loginBtn" class="primary-btn">Sign In</button>
+
+        <div class="nav-actions">
+          <button class="icon-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.96 12.8l4.34 4.35 1.41-1.41-4.35-4.34A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+          </button>
+          <button class="ghost-btn">Sign In</button>
+          <button class="primary-btn dark-btn">Create Account</button>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Public service portal</p>
-            <h1>Fast, transparent, and resident-friendly barangay services.</h1>
-            <p class="lead">
-              Request barangay documents, check updates, and get quick responses for
-              common public concerns from one simple platform.
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">WELCOME TO</p>
+            <h1>Barangay Ligid-Tipas</h1>
+            <p class="lead">A united community, a brighter tomorrow.</p>
+            <p class="subtitle">
+              We are committed to providing accessible, efficient, and transparent public service for every resident of Ligid-Tipas.
             </p>
+
             <div class="hero-actions">
-              <a href="#request" class="primary-btn">Request Service</a>
-              <a href="#services" class="secondary-btn">Explore Services</a>
+              <a href="#services" class="primary-btn hero-cta">Explore Our Services <span>→</span></a>
+              <a href="#about" class="ghost-btn light-btn">Learn About Our Barangay</a>
             </div>
-            <ul class="hero-points">
-              <li>Resident-friendly processes</li>
-              <li>Clear service requirements</li>
-              <li>Public announcements and updates</li>
-            </ul>
-          </div>
-          <div class="hero-card">
-            <div class="status-badge">Live updates</div>
-            <h3>Today at the barangay</h3>
-            <div class="notice">
-              <span class="dot"></span>
-              Issuance of certificates and clearances on weekdays from 8:00 AM to 4:00 PM.
-            </div>
-            <div class="mini-stats">
-              <div>
-                <strong>420+</strong>
-                <span>Residents served</span>
-              </div>
-              <div>
-                <strong>8</strong>
-                <span>Active services</span>
-              </div>
-              <div>
-                <strong>96%</strong>
-                <span>Satisfaction</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Popular services</p>
-            <h2>Barangay services available</h2>
-          </div>
-          <div class="service-grid">
-            <article class="service-card">
-              <h3>Barangay Clearance</h3>
-              <p>For local employment, business, and compliance requests.</p>
-              <span>Processing: 2–3 days</span>
-            </article>
-            <article class="service-card">
-              <h3>Certificate of Residency</h3>
-              <p>Proof of residence for school, work, or government requirements.</p>
-              <span>Processing: 1–2 days</span>
-            </article>
-            <article class="service-card">
-              <h3>Certificate of Indigency</h3>
-              <p>Support for assistance and community aid applications.</p>
-              <span>Processing: 2 days</span>
-            </article>
-            <article class="service-card">
-              <h3>Barangay ID</h3>
-              <p>Registration and identification for residents and household members.</p>
-              <span>Processing: 3 days</span>
-            </article>
-            <article class="service-card">
-              <h3>Business Permit Support</h3>
-              <p>For businesses seeking barangay verification and local endorsement.</p>
-              <span>Processing: 3–5 days</span>
-            </article>
-            <article class="service-card">
-              <h3>Complaint / Concern</h3>
-              <p>Report community issues, concerns, or requests to barangay staff.</p>
-              <span>Response: 1–2 days</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="request" class="section alt-bg">
-        <div class="container two-col">
-          <div>
-            <div class="section-heading left">
-              <p class="eyebrow">Request form</p>
-              <h2>Submit a document request</h2>
-            </div>
-            <form id="requestForm" class="request-form">
-              <div class="field-row">
-                <label>
-                  Full name
-                  <input type="text" id="name" placeholder="Juan Dela Cruz" required />
-                </label>
-                <label>
-                  Email
-                  <input type="email" id="email" placeholder="you@example.com" required />
-                </label>
-              </div>
-              <div class="field-row">
-                <label>
-                  Service type
-                  <select id="serviceType" required>
-                    <option value="">Select service</option>
-                    <option>Barangay Clearance</option>
-                    <option>Certificate of Residency</option>
-                    <option>Certificate of Indigency</option>
-                    <option>Barangay ID</option>
-                    <option>Business Permit Support</option>
-                    <option>Complaint / Concern</option>
-                  </select>
-                </label>
-                <label>
-                  Preferred date
-                  <input type="date" id="date" required />
-                </label>
-              </div>
-              <label>
-                Details
-                <textarea id="details" rows="5" placeholder="Describe your request or concern..." required></textarea>
-              </label>
-              <button type="submit" class="primary-btn">Submit Request</button>
-            </form>
           </div>
 
-          <aside class="panel">
-            <div class="panel-header">
-              <h3>Recent requests</h3>
-              <span id="totalRequests">0</span>
+          <aside class="promo-panel">
+            <div class="mini-badge">Stronger Communities</div>
+            <div class="mini-badge second">Better Services</div>
+            <div class="promo-box">
+              <div class="promo-line"></div>
+              <div class="promo-body">
+                <strong>Ligid-Tipas, Pasig City</strong>
+              </div>
             </div>
-            <div id="requestList" class="request-list"></div>
           </aside>
         </div>
       </section>
 
-      <section id="about" class="section">
-        <div class="container info-grid">
-          <div>
-            <p class="eyebrow">About the barangay</p>
-            <h2>Serving the community with transparency</h2>
-            <p>
-              Barangay Ligid-Tipas is committed to efficient public service delivery,
-              citizen participation, and responsive local governance.
-            </p>
-            <p>
-              This portal helps residents access essential barangay forms and track service
-              needs without unnecessary delays.
-            </p>
-          </div>
-          <div class="info-boxes">
-            <div class="info-box">
-              <strong>Office Hours</strong>
-              <span>Monday to Friday</span>
-              <small>8:00 AM – 4:00 PM</small>
+      <section class="services-strip section-shell">
+        <div class="container feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 012 2v16l-7-3-7 3V5a2 2 0 012-2zm0 2v12.2l5-2.15 5 2.15V5H7z"/></svg>
             </div>
-            <div class="info-box">
-              <strong>Hotline</strong>
-              <span>Barangay Assistance</span>
-              <small>+63 912 345 6789</small>
+            <h3>Our Barangay</h3>
+            <p>Learn about our history, structure, and community.</p>
+            <span>→</span>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 00.12-.64l-1.92-3.32a.5.5 0 00-.61-.18l-2.39.96a7.07 7.07 0 00-1.63-.94L14.5 2.5a.5.5 0 00-.5-.5h-3.99a.5.5 0 00-.5.5l-.27 2.46c-.58.23-1.12.55-1.63.94l-2.39-.96a.5.5 0 00-.61.18L2.7 8.84a.5.5 0 00.12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.82 14.52a.5.5 0 00-.12.64l1.92 3.32c.14.25.45.35.71.25l2.39-.96c.51.39 1.05.71 1.63.94l.27 2.46c.04.28.27.5.5.5h3.99c.23 0 .46-.22.5-.5l.27-2.46c.58-.23 1.12-.55 1.63-.94l2.39.96c.26.1.57 0 .71-.25l1.92-3.32a.5.5 0 00-.12-.64l-2.03-1.58zM12 15.5A3.5 3.5 0 1112 8a3.5 3.5 0 010 7.5z"/></svg>
             </div>
-            <div class="info-box">
-              <strong>Location</strong>
-              <span>Barangay Hall</span>
-              <small>Ligid-Tipas, Quezon City</small>
+            <h3>Services</h3>
+            <p>Access barangay services, requirements, and procedures.</p>
+            <span>→</span>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 18 9 9 0 000-18zm1 4h-2v6h5v-2h-3V7zm-1 11a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
             </div>
-          </div>
+            <h3>FAQ</h3>
+            <p>Find answers to common questions and concerns.</p>
+            <span>→</span>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 012 2v1h2a2 2 0 012 2v13a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2V4a2 2 0 012-2zm0 3h10V4H7v1zm-2 4v11h14V9H5zm3 2h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
+            </div>
+            <h3>Announcements</h3>
+            <p>Stay updated with the latest news and events.</p>
+            <span>→</span>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 016.8 13.2L22 22l-2 2-3.2-3.2A8 8 0 1112 2zm0 2a6 6 0 104.84 10.24L12 18.4l-4.84-4.16A6 6 0 0012 4z"/></svg>
+            </div>
+            <h3>Location &amp; Contact</h3>
+            <p>Visit us or get in touch with our office.</p>
+            <span>→</span>
+          </article>
         </div>
       </section>
 
-      <section id="chatbot" class="section alt-bg chatbot-section">
-        <div class="container chatbot-wrap">
-          <div class="section-heading left">
-            <p class="eyebrow">Resident assistant</p>
-            <h2>Need quick help?</h2>
+      <section id="about" class="section-shell info-section">
+        <div class="container info-grid">
+          <div class="info-photo">
+            <div class="photo-label">LIGID-TIPAS</div>
           </div>
-          <div class="chatbot-box">
-            <div id="chatMessages" class="chat-messages">
-              <div class="message bot">Hello! I can help with common barangay inquiries. Try asking about requirements, office hours, or available services.</div>
+
+          <div class="info-copy">
+            <p class="mini-header">OUR BARANGAY</p>
+            <h2>Ligid-Tipas</h2>
+            <p>
+              Barangay Ligid-Tipas is one of the progressive barangays in Pasig City,
+              known for its strong community, active residents, and commitment to public
+              service. Our barangay continues to work for a safer, cleaner, and more
+              sustainable environment for everyone.
+            </p>
+            <a href="#" class="secondary-btn">Read More <span>→</span></a>
+          </div>
+
+          <aside class="info-stats">
+            <div class="stat-item">
+              <div class="stat-icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <span>Ligid-Tipas, Pasig City</span>
+              </div>
             </div>
-            <form id="chatForm" class="chat-form">
-              <input id="chatInput" type="text" placeholder="Ask a question..." />
-              <button type="submit" class="primary-btn">Send</button>
-            </form>
+            <div class="stat-item">
+              <div class="stat-icon">👤</div>
+              <div>
+                <strong>Barangay Captain</strong>
+                <span>(To be updated)</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">👥</div>
+              <div>
+                <strong>Population</strong>
+                <span>(To be updated)</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">✨</div>
+              <div>
+                <strong>Vision</strong>
+                <span>A healthy, safe, and progressive Ligid-Tipas.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="updates" class="section-shell update-section">
+        <div class="container update-head">
+          <div>
+            <p class="mini-header alt">LATEST UPDATES</p>
+            <h2>News &amp; Announcements</h2>
           </div>
+          <a href="#" class="secondary-btn small-btn">View All <span>→</span></a>
+        </div>
+
+        <div class="container update-grid">
+          <article class="news-card">
+            <div class="news-image news-one"></div>
+            <div class="news-body">
+              <small>Oct 10, 2025</small>
+              <h3>Brgy. Ligid-Tipas Holds Clean-Up Drive</h3>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image news-two"></div>
+            <div class="news-body">
+              <small>Oct 9, 2025</small>
+              <h3>Financial Assistance Program</h3>
+            </div>
+          </article>
         </div>
       </section>
     </main>
 
-    <div id="loginModal" class="modal hidden">
-      <div class="modal-card">
-        <button id="closeModal" class="close-btn" aria-label="Close">×</button>
-        <h3>Resident Sign In</h3>
-        <form id="loginForm">
-          <label>
-            Username
-            <input type="text" id="username" placeholder="resident01" required />
-          </label>
-          <label>
-            Password
-            <input type="password" id="password" placeholder="••••••••" required />
-          </label>
-          <button type="submit" class="primary-btn">Login</button>
-        </form>
+    <div class="chatbot-widget" id="chatbotWidget">
+      <div class="chatbot-header">
+        <div class="chatbot-brand">
+          <span class="bot-icon">AI</span>
+          <div>
+            <strong>Barang-AI</strong>
+            <small>Your Barangay Assistant</small>
+          </div>
+        </div>
+        <button id="toggleChat" class="mini-toggle" aria-label="Toggle bot">−</button>
       </div>
-    </div>
 
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>© 2026 Barangay Ligid-Tipas. All rights reserved.</p>
-        <p>Resident Portal</p>
+      <div class="chatbot-body" id="chatbotBody">
+        <div class="chat-message bot">Hi! I'm Barang-AI. Ask me anything about barangay services, requirements, or information.</div>
+        <div class="chat-message user">What are the barangay services available?</div>
+        <div class="chat-message bot">We offer barangay clearance, residency, indigency, business permit support, and community concern assistance.</div>
       </div>
-    </footer>
+
+      <form id="chatForm" class="chatbot-form">
+        <input id="chatInput" type="text" placeholder="Chat now →" aria-label="Ask question" />
+        <button type="submit" aria-label="Send message">→</button>
+      </form>
+    </div>
 
     <script src="app.js"></script>
   </body>
 </html>
+
+
+
+
+
